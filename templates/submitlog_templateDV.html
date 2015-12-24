@@ -1,0 +1,379 @@
+<!-- Edit this file to change the layout of the detail view form -->
+
+<script src="resources/datepicker/js/datepicker.packed.js"></script>
+<link href="resources/datepicker/css/datepicker.css" rel="stylesheet">
+
+<a name="detail-view"></a>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div class="panel-body" id="submitlog_dv_container">
+	<!-- child links -->
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="submitlog_dv_form">
+			<fieldset class="form-horizontal">
+
+				<div class="form-group">
+					<label for="submid" class="control-label col-lg-3">No <button class="btn btn-info btn-xs vspacer-sm" type="button" data-toggle="collapse" tabindex="-1" data-target="#submid-description"><i class="glyphicon glyphicon-info-sign"></i></button></label>
+					<div class="col-lg-9">
+						<span class="help-block collapse" id="submid-description"><div class="alert alert-info">No</div></span>
+
+						<div class="form-control-static" id="submid"><%%VALUE(submid)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<div class="col-lg-offset-3 col-lg-9">
+						<div class="checkbox"><label for="cstatus"><input type="checkbox" name="cstatus" id="cstatus" value="1" <%%CHECKED(cstatus)%%>> Status</label>
+							<button class="btn btn-info btn-xs" type="button" data-toggle="collapse" tabindex="-1" data-target="#cstatus-description"><i class="glyphicon glyphicon-info-sign"></i></button>
+							<span class="help-block collapse" id="cstatus-description"><div class="alert alert-info">Confirmed or not</div></span>
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="logtime" class="control-label col-lg-3">Submission Date</label>
+					<div class="col-lg-9">
+						<input maxlength="" type="text" class="form-control" name="logtime" id="logtime" value="<%%VALUE(logtime)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="ipaddr" class="control-label col-lg-3">IP</label>
+					<div class="col-lg-9">
+						<input maxlength="20" type="text" class="form-control" name="ipaddr" id="ipaddr" value="<%%VALUE(ipaddr)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="company" class="control-label col-lg-3">Company Name</label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="company" id="company" value="<%%VALUE(company)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="country" class="control-label col-lg-3">Country</label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="country" id="country" value="<%%VALUE(country)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="website" class="control-label col-lg-3">website</label>
+					<div class="col-lg-9">
+						
+						<div class="row">
+							<div class="col-md-8">
+								<a id="website-link" href="link.php?t=submitlog&f=website&i=<%%VALUE(submid)%%>" target="_blank"><%%VALUE(website)%%></a>
+								<label for="website"><button type="button" id="website-edit-link" class="btn btn-default hspacer-lg vspacer-sm" data-toggle="collapse" data-target="#website" title="<%%TRANSLATION(Edit)%%>"><i class="glyphicon glyphicon-pencil"></i></button></label>
+							</div>
+							<script>jQuery(function(){ var e_website = '<%%VALUE(website)%%>'; if(e_website == '' || e_website == '&nbsp;' || e_website == 'blank.gif') jQuery('#website-link').hide(); });</script><input maxlength="128" type="text" class="form-control collapse" name="website" id="website" value="<%%VALUE(website)%%>">					</div>
+
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="contactname" class="control-label col-lg-3">contactname</label>
+					<div class="col-lg-9">
+						<input maxlength="60" type="text" class="form-control" name="contactname" id="contactname" value="<%%VALUE(contactname)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="email" class="control-label col-lg-3">email</label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="email" id="email" value="<%%VALUE(email)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="title" class="control-label col-lg-3">Title</label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="title" id="title" value="<%%VALUE(title)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="version" class="control-label col-lg-3">Version</label>
+					<div class="col-lg-9">
+						<input maxlength="15" type="text" class="form-control" name="version" id="version" value="<%%VALUE(version)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="pdate" class="control-label col-lg-3">pdate</label>
+					<div class="col-lg-9">
+						<%%COMBO(pdate)%%>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="cost" class="control-label col-lg-3">cost</label>
+					<div class="col-lg-9">
+						<input maxlength="1" type="text" class="form-control" name="cost" id="cost" value="<%%VALUE(cost)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="ptype" class="control-label col-lg-3">ptype</label>
+					<div class="col-lg-9">
+						<input maxlength="15" type="text" class="form-control" name="ptype" id="ptype" value="<%%VALUE(ptype)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="install" class="control-label col-lg-3">install</label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="install" id="install" value="<%%VALUE(install)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="os" class="control-label col-lg-3">os</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="os" id="os" value="<%%VALUE(os)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="languages" class="control-label col-lg-3">languages</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="languages" id="languages" value="<%%VALUE(languages)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="changeinfo" class="control-label col-lg-3">changeinfo</label>
+					<div class="col-lg-9">
+						<input maxlength="" type="text" class="form-control" name="changeinfo" id="changeinfo" value="<%%VALUE(changeinfo)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="category" class="control-label col-lg-3">category</label>
+					<div class="col-lg-9">
+						<input maxlength="80" type="text" class="form-control" name="category" id="category" value="<%%VALUE(category)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="requirements" class="control-label col-lg-3">requirements</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="requirements" id="requirements" value="<%%VALUE(requirements)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="ksize" class="control-label col-lg-3">ksize</label>
+					<div class="col-lg-9">
+						<input maxlength="11" type="text" class="form-control" name="ksize" id="ksize" value="<%%VALUE(ksize)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="keywords" class="control-label col-lg-3">keywords</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="keywords" id="keywords" value="<%%VALUE(keywords)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="description" class="control-label col-lg-3">description</label>
+					<div class="col-lg-9">
+						<input maxlength="84" type="text" class="form-control" name="description" id="description" value="<%%VALUE(description)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="descrlarge" class="control-label col-lg-3">descrlarge</label>
+					<div class="col-lg-9">
+						<input maxlength="" type="text" class="form-control" name="descrlarge" id="descrlarge" value="<%%VALUE(descrlarge)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="homepage" class="control-label col-lg-3">homepage</label>
+					<div class="col-lg-9">
+						<input maxlength="128" type="text" class="form-control" name="homepage" id="homepage" value="<%%VALUE(homepage)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="screenshot" class="control-label col-lg-3">screenshot</label>
+					<div class="col-lg-9">
+						
+						<div class="row">
+							<div class="col-md-8">
+								<a id="screenshot-link" href="link.php?t=submitlog&f=screenshot&i=<%%VALUE(submid)%%>" target="_blank"><%%VALUE(screenshot)%%></a>
+								<label for="screenshot"><button type="button" id="screenshot-edit-link" class="btn btn-default hspacer-lg vspacer-sm" data-toggle="collapse" data-target="#screenshot" title="<%%TRANSLATION(Edit)%%>"><i class="glyphicon glyphicon-pencil"></i></button></label>
+							</div>
+							<script>jQuery(function(){ var e_screenshot = '<%%VALUE(screenshot)%%>'; if(e_screenshot == '' || e_screenshot == '&nbsp;' || e_screenshot == 'blank.gif') jQuery('#screenshot-link').hide(); });</script><input maxlength="128" type="text" class="form-control collapse" name="screenshot" id="screenshot" value="<%%VALUE(screenshot)%%>">					</div>
+
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="icon" class="control-label col-lg-3">icon</label>
+					<div class="col-lg-9">
+						<input maxlength="128" type="text" class="form-control" name="icon" id="icon" value="<%%VALUE(icon)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="padfile" class="control-label col-lg-3">PAD file</label>
+					<div class="col-lg-9">
+						<input maxlength="128" type="text" class="form-control" name="padfile" id="padfile" value="<%%VALUE(padfile)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="download" class="control-label col-lg-3">Download</label>
+					<div class="col-lg-9">
+						<input maxlength="128" type="text" class="form-control" name="download" id="download" value="<%%VALUE(download)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="aspnumber" class="control-label col-lg-3">aspnumber</label>
+					<div class="col-lg-9">
+						<input maxlength="5" type="text" class="form-control" name="aspnumber" id="aspnumber" value="<%%VALUE(aspnumber)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="backlink" class="control-label col-lg-3">Backlink URL</label>
+					<div class="col-lg-9">
+						
+						<div class="row">
+							<div class="col-md-8">
+								<a id="backlink-link" href="link.php?t=submitlog&f=backlink&i=<%%VALUE(submid)%%>" target="_blank"><%%VALUE(backlink)%%></a>
+								<label for="backlink"><button type="button" id="backlink-edit-link" class="btn btn-default hspacer-lg vspacer-sm" data-toggle="collapse" data-target="#backlink" title="<%%TRANSLATION(Edit)%%>"><i class="glyphicon glyphicon-pencil"></i></button></label>
+							</div>
+							<script>jQuery(function(){ var e_backlink = '<%%VALUE(backlink)%%>'; if(e_backlink == '' || e_backlink == '&nbsp;' || e_backlink == 'blank.gif') jQuery('#backlink-link').hide(); });</script><input maxlength="128" type="text" class="form-control collapse" name="backlink" id="backlink" value="<%%VALUE(backlink)%%>">					</div>
+
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="affiliate" class="control-label col-lg-3">Affiliate</label>
+					<div class="col-lg-9">
+						<input maxlength="1" type="text" class="form-control" name="affiliate" id="affiliate" value="<%%VALUE(affiliate)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="affiliateid" class="control-label col-lg-3">Affiliate Data</label>
+					<div class="col-lg-9">
+						<input maxlength="15" type="text" class="form-control" name="affiliateid" id="affiliateid" value="<%%VALUE(affiliateid)%%>">
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<div class="col-md-4 col-lg-2" id="submitlog_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			$j('select, input[type=text], textarea').not(':disabled').eq(0).focus();
+			$j('form').eq(0).change(function(){
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%TRANSLATION(ImageFolder)%%>"]').click(function(){ return false; });
+
+
+			if(!embedded_mode){
+				/* add a horizontal spacer to [add new parent] buttons that don't have a spacered element before them */
+				$j('.add_new_parent').prev(':not(.hspacer-lg)').next().addClass('hspacer-lg');
+
+				$j('.add_new_parent').click(function(){
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function(){
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			/* find and hide parent links if field label has data 'parent_link' set to 'view_parent_hidden' */
+			$j('label[data-parent_link=view_parent_hidden]').each(function(){
+				$j(this).parents('.form-group').find('.view_parent').hide();
+			});
+
+			$j('form').on('click', '.view_parent', function(){
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length){
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				}else{
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length){
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}'){
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link){
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function(){
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+		});
+	</script>

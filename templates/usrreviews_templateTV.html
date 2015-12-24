@@ -1,0 +1,14 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%select%%> and <%%endselect%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- open the generated 'usrreviews_view.php' file in your text editor and -->
+<!-- change the value of $x->ShowTableHeader to 0 -->
+
+		<td id="usrreviews-revid-<%%VALUE(revid)%%>" class="usrreviews-revid text-right"><%%SELECT%%><%%VALUE(revid)%%><%%ENDSELECT%%></td>
+		<td id="usrreviews-progid-<%%VALUE(revid)%%>" class="usrreviews-progid text-right"><%%SELECT%%><%%VALUE(progid)%%><%%ENDSELECT%%></td>
+		<td id="usrreviews-useripaddr-<%%VALUE(revid)%%>" class="usrreviews-useripaddr "><%%SELECT%%><%%VALUE(useripaddr)%%><%%ENDSELECT%%></td>
+		<td id="usrreviews-revtime-<%%VALUE(revid)%%>" class="usrreviews-revtime "><%%SELECT%%><%%VALUE(revtime)%%><%%ENDSELECT%%></td>
+		<td id="usrreviews-username-<%%VALUE(revid)%%>" class="usrreviews-username "><%%SELECT%%><%%VALUE(username)%%><%%ENDSELECT%%></td>
+		<td id="usrreviews-userrating-<%%VALUE(revid)%%>" class="usrreviews-userrating text-right"><%%SELECT%%><%%VALUE(userrating)%%><%%ENDSELECT%%></td>
+		<td id="usrreviews-usercomment-<%%VALUE(revid)%%>" class="usrreviews-usercomment "><%%SELECT%%><%%VALUE(usercomment)%%><%%ENDSELECT%%></td>

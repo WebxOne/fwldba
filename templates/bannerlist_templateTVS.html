@@ -1,0 +1,6 @@
+<!-- Edit this file to change the layout of the highlighted record in the table view -->
+		<td id="bannerlist-bannerid-<%%VALUE(bannerid)%%>" class="text-right"><%%VALUE(bannerid)%%></td>
+		<td id="bannerlist-imgurl-<%%VALUE(bannerid)%%>" class=""><a href="link.php?t=bannerlist&f=imgurl&i=<%%VALUE(bannerid)%%>" target="_blank" class="" style="padding: 0;"><%%VALUE(imgurl)%%></a></td>
+		<td id="bannerlist-linkurl-<%%VALUE(bannerid)%%>" class=""><a href="link.php?t=bannerlist&f=linkurl&i=<%%VALUE(bannerid)%%>" target="_blank" class="" style="padding: 0;"><%%VALUE(linkurl)%%></a></td>
+		<script>jQuery(function(){ var e_imgurl = '<%%VALUE(imgurl)%%>'; if(e_imgurl == '' || e_imgurl == '&nbsp;') jQuery('#bannerlist-imgurl-<%%VALUE(bannerid)%%>').html(''); });</script>
+		<script>jQuery(function(){ var e_linkurl = '<%%VALUE(linkurl)%%>'; if(e_linkurl == '' || e_linkurl == '&nbsp;') jQuery('#bannerlist-linkurl-<%%VALUE(bannerid)%%>').html(''); });</script>

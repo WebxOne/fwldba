@@ -1,0 +1,372 @@
+<!-- Edit this file to change the layout of the detail view form -->
+
+<script src="resources/datepicker/js/datepicker.packed.js"></script>
+<link href="resources/datepicker/css/datepicker.css" rel="stylesheet">
+
+<a name="detail-view"></a>
+<div class="panel-heading"><h3 class="panel-title"><strong><%%DETAIL_VIEW_TITLE%%></strong></h3></div>
+
+<div class="panel-body" id="paddata_dv_container">
+	<!-- child links -->
+	<div class="row">
+		<div class="col-xs-12">
+			<div class="clearfix"></div>
+		</div>
+	</div>
+
+	<div class="row">
+		<!-- form inputs -->
+		<div class="col-md-8 col-lg-10" id="paddata_dv_form">
+			<fieldset class="form-horizontal">
+
+				<div class="form-group">
+					<label for="progid" class="control-label col-lg-3">progid</label>
+					<div class="col-lg-9">
+						<div class="form-control-static" id="progid"><%%VALUE(progid)%%></div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="company" class="control-label col-lg-3">company</label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="company" id="company" value="<%%VALUE(company)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="country" class="control-label col-lg-3">country</label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="country" id="country" value="<%%VALUE(country)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="website" class="control-label col-lg-3">website</label>
+					<div class="col-lg-9">
+						<input maxlength="128" type="text" class="form-control" name="website" id="website" value="<%%VALUE(website)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="contactname" class="control-label col-lg-3">contactname</label>
+					<div class="col-lg-9">
+						<input maxlength="60" type="text" class="form-control" name="contactname" id="contactname" value="<%%VALUE(contactname)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="email" class="control-label col-lg-3">email</label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="email" id="email" value="<%%VALUE(email)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="title" class="control-label col-lg-3">title</label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="title" id="title" value="<%%VALUE(title)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="version" class="control-label col-lg-3">version</label>
+					<div class="col-lg-9">
+						<input maxlength="15" type="text" class="form-control" name="version" id="version" value="<%%VALUE(version)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="pdate" class="control-label col-lg-3">pdate</label>
+					<div class="col-lg-9">
+						<%%COMBO(pdate)%%>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="cost" class="control-label col-lg-3">cost</label>
+					<div class="col-lg-9">
+						<input maxlength="1" type="text" class="form-control" name="cost" id="cost" value="<%%VALUE(cost)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="ptype" class="control-label col-lg-3">ptype</label>
+					<div class="col-lg-9">
+						<input maxlength="15" type="text" class="form-control" name="ptype" id="ptype" value="<%%VALUE(ptype)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="status" class="control-label col-lg-3">status</label>
+					<div class="col-lg-9">
+						<%%COMBO(status)%%>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="install" class="control-label col-lg-3">install</label>
+					<div class="col-lg-9">
+						<input maxlength="50" type="text" class="form-control" name="install" id="install" value="<%%VALUE(install)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="os" class="control-label col-lg-3">os</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="os" id="os" value="<%%VALUE(os)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="languages" class="control-label col-lg-3">languages</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="languages" id="languages" value="<%%VALUE(languages)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="changeinfo" class="control-label col-lg-3">changeinfo</label>
+					<div class="col-lg-9">
+						<input maxlength="" type="text" class="form-control" name="changeinfo" id="changeinfo" value="<%%VALUE(changeinfo)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="category" class="control-label col-lg-3">category</label>
+					<div class="col-lg-9">
+						<input maxlength="80" type="text" class="form-control" name="category" id="category" value="<%%VALUE(category)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="requirements" class="control-label col-lg-3">requirements</label>
+					<div class="col-lg-9">
+						<input maxlength="200" type="text" class="form-control" name="requirements" id="requirements" value="<%%VALUE(requirements)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="ksize" class="control-label col-lg-3">ksize</label>
+					<div class="col-lg-9">
+						<input maxlength="11" type="text" class="form-control" name="ksize" id="ksize" value="<%%VALUE(ksize)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="keywords" class="control-label col-lg-3">keywords</label>
+					<div class="col-lg-9">
+						<input maxlength="255" type="text" class="form-control" name="keywords" id="keywords" value="<%%VALUE(keywords)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="description" class="control-label col-lg-3">description</label>
+					<div class="col-lg-9">
+						<input maxlength="84" type="text" class="form-control" name="description" id="description" value="<%%VALUE(description)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="descrlarge" class="control-label col-lg-3">descrlarge</label>
+					<div class="col-lg-9">
+						<input maxlength="" type="text" class="form-control" name="descrlarge" id="descrlarge" value="<%%VALUE(descrlarge)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="homepage" class="control-label col-lg-3">homepage</label>
+					<div class="col-lg-9">
+						<input maxlength="128" type="text" class="form-control" name="homepage" id="homepage" value="<%%VALUE(homepage)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="screenshot" class="control-label col-lg-3">screenshot</label>
+					<div class="col-lg-9">
+						<input maxlength="128" type="text" class="form-control" name="screenshot" id="screenshot" value="<%%VALUE(screenshot)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="icon" class="control-label col-lg-3">icon</label>
+					<div class="col-lg-9">
+						<input maxlength="128" type="text" class="form-control" name="icon" id="icon" value="<%%VALUE(icon)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="padfile" class="control-label col-lg-3">padfile</label>
+					<div class="col-lg-9">
+						<input maxlength="128" type="text" class="form-control" name="padfile" id="padfile" value="<%%VALUE(padfile)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="download" class="control-label col-lg-3">download</label>
+					<div class="col-lg-9">
+						<input maxlength="128" type="text" class="form-control" name="download" id="download" value="<%%VALUE(download)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="dlcount" class="control-label col-lg-3">dlcount</label>
+					<div class="col-lg-9">
+						<input maxlength="11" type="text" class="form-control" name="dlcount" id="dlcount" value="<%%VALUE(dlcount)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="dlipaddr" class="control-label col-lg-3">dlipaddr</label>
+					<div class="col-lg-9">
+						<input maxlength="20" type="text" class="form-control" name="dlipaddr" id="dlipaddr" value="<%%VALUE(dlipaddr)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="aspnumber" class="control-label col-lg-3">aspnumber</label>
+					<div class="col-lg-9">
+						<input maxlength="5" type="text" class="form-control" name="aspnumber" id="aspnumber" value="<%%VALUE(aspnumber)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="affiliate" class="control-label col-lg-3">affiliate</label>
+					<div class="col-lg-9">
+						<%%COMBO(affiliate)%%>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="affiliateid" class="control-label col-lg-3">affiliateid</label>
+					<div class="col-lg-9">
+						<input maxlength="15" type="text" class="form-control" name="affiliateid" id="affiliateid" value="<%%VALUE(affiliateid)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="siterating" class="control-label col-lg-3">siterating</label>
+					<div class="col-lg-9">
+						<input maxlength="1" type="text" class="form-control" name="siterating" id="siterating" value="<%%VALUE(siterating)%%>">
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="clean" class="control-label col-lg-3">clean</label>
+					<div class="col-lg-9">
+						<%%COMBO(clean)%%>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label for="paderrcount" class="control-label col-lg-3">paderrcount</label>
+					<div class="col-lg-9">
+						<input maxlength="11" type="text" class="form-control" name="paderrcount" id="paderrcount" value="<%%VALUE(paderrcount)%%>">
+					</div>
+				</div>
+
+			</fieldset>
+		</div>
+
+		<!-- DV action buttons -->
+		<div class="col-md-4 col-lg-2" id="paddata_dv_action_buttons">
+			<div class="btn-toolbar">
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%UPDATE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%DESELECT_BUTTON%%>
+					<%%DVPRINT_BUTTON%%>
+					<%%DELETE_BUTTON%%>
+				</div><p></p>
+				<div class="btn-group-vertical btn-group-lg" style="width: 100%;">
+					<%%INSERT_BUTTON%%>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</div><!-- /div class="panel-body" -->
+	<script>
+		$j(function() {
+			var add_new_mode = (!$j('input[name=SelectedID]').val());
+			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
+
+			$j('select, input[type=text], textarea').not(':disabled').eq(0).focus();
+			$j('form').eq(0).change(function(){
+				if($j(this).data('already_changed')) return;
+				if($j('#deselect').length) $j('#deselect').removeClass('btn-default').addClass('btn-warning').get(0).lastChild.data = " <%%TRANSLATION(Cancel)%%>";
+				$j(this).data('already_changed', true);
+			});
+
+			$j('a[href="<%%TRANSLATION(ImageFolder)%%>"]').click(function(){ return false; });
+
+
+			if(!embedded_mode){
+				/* add a horizontal spacer to [add new parent] buttons that don't have a spacered element before them */
+				$j('.add_new_parent').prev(':not(.hspacer-lg)').next().addClass('hspacer-lg');
+
+				$j('.add_new_parent').click(function(){
+					var pt = $j(this).attr('id').replace(/_add_new$/, '');
+					modal_window({
+						url: pt + '_view.php?addNew_x=1&Embedded=1',
+						close: function(){
+							var field_id = $j('#' + pt + '_add_new').prevAll('input:hidden').eq(0).attr('id');
+							$j('#' + field_id + '-container').select2('focus').select2('focus');
+						},
+						size: 'full',
+						title: $j(this).attr('title')
+					});
+				});
+			}
+
+			/* find and hide parent links if field label has data 'parent_link' set to 'view_parent_hidden' */
+			$j('label[data-parent_link=view_parent_hidden]').each(function(){
+				$j(this).parents('.form-group').find('.view_parent').hide();
+			});
+
+			$j('form').on('click', '.view_parent', function(){
+				var pt = $j(this).attr('id').replace(/_view_parent$/, '');
+				if($j(this).prevAll('input:hidden').length){
+					var parent_id = $j(this).prevAll('input:hidden').eq(0).val();
+				}else{
+					var parent_id = $j(this).prevAll().children('input:hidden').eq(0).val();
+				}
+
+				/* handle radio lookups */
+				if($j(this).prevAll('[type=radio]').length){
+					parent_id = $j(this).prevAll('[type=radio]').eq(0).val();
+				}
+
+				if(parent_id != '{empty_value}'){
+					var parent_link = $j(this).parents('.form-group').children('label').data('parent_link');
+					switch(parent_link){
+						case 'view_parent_hidden':
+							break;
+						case 'view_parent_modal':
+							modal_window({
+								url: pt + '_view.php?Embedded=1&SelectedID=' + encodeURIComponent(parent_id),
+								close: function(){
+									var field_id = $j('#' + pt + '_view_parent').prevAll('input:hidden').eq(0).attr('id');
+									$j('#' + field_id + '-container').select2('focus').select2('focus');
+								},
+								size: 'full',
+								title: $j(this).attr('title')
+							});
+							break;
+						case 'view_parent_same_window':
+							window.location = pt + '_view.php?Embedded=' + (embedded_mode ? '1' : '') + '&SelectedID=' + encodeURIComponent(parent_id);
+							break;
+						case 'view_parent_new_window':
+							window.open(pt + '_view.php?SelectedID=' + encodeURIComponent(parent_id));
+							break;
+					}
+
+				}
+			});
+
+		});
+	</script>

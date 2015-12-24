@@ -1,0 +1,228 @@
+<!-- Edit this file to change the layout of the detail view print preview page -->
+
+
+<div class="panel-heading"><h3 class="panel-title">
+	<strong><%%DETAIL_VIEW_TITLE%%></strong>
+	<div class="hidden-print pull-right">
+		<div class="btn-group">
+			<button type="button" id="print" onclick="window.print();" title="<%%TRANSLATION(Print)%%>" class="btn btn-primary"><i class="glyphicon glyphicon-print"></i> <%%TRANSLATION(Print)%%></button>
+			<button type="submit" id="back" title="<%%TRANSLATION(Cancel Printing)%%>" class="btn btn-default"><i class="glyphicon glyphicon-remove-circle"></i> <%%TRANSLATION(Cancel Printing)%%></button>
+		</div>
+	</div>
+	<div class="clearfix"></div>
+</h3></div>
+
+<div class="panel-body">
+	<fieldset class="form-horizontal">
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">progid</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(progid)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">company</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(company)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">country</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(country)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">website</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(website)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">contactname</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(contactname)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">email</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(email)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">title</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(title)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">version</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(version)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">pdate</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(pdate)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">cost</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(cost)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ptype</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(ptype)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">status</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(status)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">install</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(install)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">os</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(os)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">languages</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(languages)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">changeinfo</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(changeinfo)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">category</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(category)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">requirements</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(requirements)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">ksize</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(ksize)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">keywords</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(keywords)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">description</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(description)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">descrlarge</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(descrlarge)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">homepage</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(homepage)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">screenshot</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(screenshot)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">icon</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(icon)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">padfile</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(padfile)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">download</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(download)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">dlcount</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(dlcount)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">dlipaddr</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(dlipaddr)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">aspnumber</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(aspnumber)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">affiliate</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(affiliate)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">affiliateid</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(affiliateid)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">siterating</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(siterating)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">clean</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%COMBOTEXT(clean)%%></div>
+			</div>
+		</div>
+		<div class="form-group" style="border-bottom: dotted 1px #DDD;">
+			<label class="col-xs-3 control-label">paderrcount</label>
+			<div class="col-xs-9">
+				<div class="form-control-static"><%%VALUE(paderrcount)%%></div>
+			</div>
+		</div>
+	</fieldset>
+</div>

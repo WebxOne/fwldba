@@ -1,0 +1,21 @@
+<!-- Edit this file to change the layout of each record in the table view -->
+<!-- To disable clicking of a field, remove the <%%select%%> and <%%endselect%%> formatters around it-->
+
+<!-- If you wish to hide the table view header that contains the column titles, -->
+<!-- open the generated 'submitlog_view.php' file in your text editor and -->
+<!-- change the value of $x->ShowTableHeader to 0 -->
+
+		<td id="submitlog-submid-<%%VALUE(submid)%%>" class="submitlog-submid text-right"><%%SELECT%%><%%VALUE(submid)%%><%%ENDSELECT%%></td>
+		<td id="submitlog-logtime-<%%VALUE(submid)%%>" class="submitlog-logtime "><%%SELECT%%><%%VALUE(logtime)%%><%%ENDSELECT%%></td>
+		<td id="submitlog-ipaddr-<%%VALUE(submid)%%>" class="submitlog-ipaddr "><%%SELECT%%><%%VALUE(ipaddr)%%><%%ENDSELECT%%></td>
+		<td id="submitlog-company-<%%VALUE(submid)%%>" class="submitlog-company "><%%SELECT%%><%%VALUE(company)%%><%%ENDSELECT%%></td>
+		<td id="submitlog-country-<%%VALUE(submid)%%>" class="submitlog-country "><%%SELECT%%><%%VALUE(country)%%><%%ENDSELECT%%></td>
+		<td id="submitlog-title-<%%VALUE(submid)%%>" class="submitlog-title "><%%SELECT%%><%%VALUE(title)%%><%%ENDSELECT%%></td>
+		<td id="submitlog-version-<%%VALUE(submid)%%>" class="submitlog-version "><%%SELECT%%><%%VALUE(version)%%><%%ENDSELECT%%></td>
+		<td id="submitlog-description-<%%VALUE(submid)%%>" class="submitlog-description "><%%SELECT%%><%%VALUE(description)%%><%%ENDSELECT%%></td>
+		<td id="submitlog-homepage-<%%VALUE(submid)%%>" class="submitlog-homepage "><%%SELECT%%><%%VALUE(homepage)%%><%%ENDSELECT%%></td>
+		<td id="submitlog-download-<%%VALUE(submid)%%>" class="submitlog-download "><%%SELECT%%><%%VALUE(download)%%><%%ENDSELECT%%></td>
+		<td id="submitlog-backlink-<%%VALUE(submid)%%>" class="submitlog-backlink "><a href="link.php?t=submitlog&f=backlink&i=<%%VALUE(submid)%%>" target="_blank"><%%VALUE(backlink)%%></a></td>
+		<td id="submitlog-affiliate-<%%VALUE(submid)%%>" class="submitlog-affiliate "><%%SELECT%%><%%VALUE(affiliate)%%><%%ENDSELECT%%></td>
+		<td id="submitlog-affiliateid-<%%VALUE(submid)%%>" class="submitlog-affiliateid "><%%SELECT%%><%%VALUE(affiliateid)%%><%%ENDSELECT%%></td>
+		<script>jQuery(function(){ var e_backlink='<%%VALUE(backlink)%%>'; if(e_backlink=='' || e_backlink=='&nbsp;') jQuery('#submitlog-backlink-<%%VALUE(submid)%%>').html(''); });</script>

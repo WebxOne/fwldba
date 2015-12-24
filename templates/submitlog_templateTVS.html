@@ -1,0 +1,15 @@
+<!-- Edit this file to change the layout of the highlighted record in the table view -->
+		<td id="submitlog-submid-<%%VALUE(submid)%%>" class="text-right"><%%VALUE(submid)%%></td>
+		<td id="submitlog-logtime-<%%VALUE(submid)%%>" class=""><%%VALUE(logtime)%%></td>
+		<td id="submitlog-ipaddr-<%%VALUE(submid)%%>" class=""><%%VALUE(ipaddr)%%></td>
+		<td id="submitlog-company-<%%VALUE(submid)%%>" class=""><%%VALUE(company)%%></td>
+		<td id="submitlog-country-<%%VALUE(submid)%%>" class=""><%%VALUE(country)%%></td>
+		<td id="submitlog-title-<%%VALUE(submid)%%>" class=""><%%VALUE(title)%%></td>
+		<td id="submitlog-version-<%%VALUE(submid)%%>" class=""><%%VALUE(version)%%></td>
+		<td id="submitlog-description-<%%VALUE(submid)%%>" class=""><%%VALUE(description)%%></td>
+		<td id="submitlog-homepage-<%%VALUE(submid)%%>" class=""><%%VALUE(homepage)%%></td>
+		<td id="submitlog-download-<%%VALUE(submid)%%>" class=""><%%VALUE(download)%%></td>
+		<td id="submitlog-backlink-<%%VALUE(submid)%%>" class=""><a href="link.php?t=submitlog&f=backlink&i=<%%VALUE(submid)%%>" target="_blank" class="" style="padding: 0;"><%%VALUE(backlink)%%></a></td>
+		<td id="submitlog-affiliate-<%%VALUE(submid)%%>" class=""><%%VALUE(affiliate)%%></td>
+		<td id="submitlog-affiliateid-<%%VALUE(submid)%%>" class=""><%%VALUE(affiliateid)%%></td>
+		<script>jQuery(function(){ var e_backlink = '<%%VALUE(backlink)%%>'; if(e_backlink == '' || e_backlink == '&nbsp;') jQuery('#submitlog-backlink-<%%VALUE(submid)%%>').html(''); });</script>
