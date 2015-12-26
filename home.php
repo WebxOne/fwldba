@@ -13,7 +13,7 @@
 	*/
 	$block_classes = array(
 		'first' => array(
-			'grid_column' => 'col-sm-6 col-md-4 col-lg-3',
+			'grid_column' => 'col-sm-12 col-md-8 col-lg-6',
 			'panel' => 'panel-warning',
 			'link' => 'btn-warning'
 		),
@@ -28,7 +28,7 @@
 <style>
 	.panel-body-description{
 		margin-top: 10px;
-		height: 50px;
+		height: 40px;
 		overflow: auto;
 	}
 	.panel-body .btn img{
@@ -58,7 +58,7 @@
 		$i = 0; $current_group = '';
 		foreach($tg as $tn => $tgroup){
 			$tc = $arrTables[$tn];
-			$tChkFF = array_search($tn, array('submitlog','paddata'));
+			$tChkFF = array_search($tn, array('paddata'));
 			$tChkHL = array_search($tn, array());
 			$tChkAHAN = array_search($tn, array('customurls','bannerlist'));
 

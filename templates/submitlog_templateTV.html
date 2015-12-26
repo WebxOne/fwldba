@@ -14,8 +14,9 @@
 		<td id="submitlog-version-<%%VALUE(submid)%%>" class="submitlog-version "><%%SELECT%%><%%VALUE(version)%%><%%ENDSELECT%%></td>
 		<td id="submitlog-description-<%%VALUE(submid)%%>" class="submitlog-description "><%%SELECT%%><%%VALUE(description)%%><%%ENDSELECT%%></td>
 		<td id="submitlog-homepage-<%%VALUE(submid)%%>" class="submitlog-homepage "><%%SELECT%%><%%VALUE(homepage)%%><%%ENDSELECT%%></td>
-		<td id="submitlog-download-<%%VALUE(submid)%%>" class="submitlog-download "><%%SELECT%%><%%VALUE(download)%%><%%ENDSELECT%%></td>
+		<td id="submitlog-download-<%%VALUE(submid)%%>" class="submitlog-download "><a href="link.php?t=submitlog&f=download&i=<%%VALUE(submid)%%>" target="_blank"><%%VALUE(download)%%></a></td>
 		<td id="submitlog-backlink-<%%VALUE(submid)%%>" class="submitlog-backlink "><a href="link.php?t=submitlog&f=backlink&i=<%%VALUE(submid)%%>" target="_blank"><%%VALUE(backlink)%%></a></td>
 		<td id="submitlog-affiliate-<%%VALUE(submid)%%>" class="submitlog-affiliate "><%%SELECT%%><%%VALUE(affiliate)%%><%%ENDSELECT%%></td>
 		<td id="submitlog-affiliateid-<%%VALUE(submid)%%>" class="submitlog-affiliateid "><%%SELECT%%><%%VALUE(affiliateid)%%><%%ENDSELECT%%></td>
+		<script>jQuery(function(){ var e_download='<%%VALUE(download)%%>'; if(e_download=='' || e_download=='&nbsp;') jQuery('#submitlog-download-<%%VALUE(submid)%%>').html(''); });</script>
 		<script>jQuery(function(){ var e_backlink='<%%VALUE(backlink)%%>'; if(e_backlink=='' || e_backlink=='&nbsp;') jQuery('#submitlog-backlink-<%%VALUE(submid)%%>').html(''); });</script>

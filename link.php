@@ -9,6 +9,7 @@
 		'submitlog' => array(
 			'website' => '',
 			'screenshot' => '',
+			'download' => '',
 			'backlink' => '',
 			'primary key' => 'submid'
 		),

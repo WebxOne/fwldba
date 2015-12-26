@@ -37,7 +37,7 @@
 			'download' => array('appgini' => 'VARCHAR(128) '),
 			'aspnumber' => array('appgini' => 'VARCHAR(5) '),
 			'backlink' => array('appgini' => 'VARCHAR(128) '),
-			'affiliate' => array('appgini' => 'VARCHAR(1) '),
+			'affiliate' => array('appgini' => 'VARCHAR(40) '),
 			'affiliateid' => array('appgini' => 'VARCHAR(15) ')
 		),
 		'paddata' => array(   

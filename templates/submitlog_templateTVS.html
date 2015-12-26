@@ -8,8 +8,9 @@
 		<td id="submitlog-version-<%%VALUE(submid)%%>" class=""><%%VALUE(version)%%></td>
 		<td id="submitlog-description-<%%VALUE(submid)%%>" class=""><%%VALUE(description)%%></td>
 		<td id="submitlog-homepage-<%%VALUE(submid)%%>" class=""><%%VALUE(homepage)%%></td>
-		<td id="submitlog-download-<%%VALUE(submid)%%>" class=""><%%VALUE(download)%%></td>
+		<td id="submitlog-download-<%%VALUE(submid)%%>" class=""><a href="link.php?t=submitlog&f=download&i=<%%VALUE(submid)%%>" target="_blank" class="" style="padding: 0;"><%%VALUE(download)%%></a></td>
 		<td id="submitlog-backlink-<%%VALUE(submid)%%>" class=""><a href="link.php?t=submitlog&f=backlink&i=<%%VALUE(submid)%%>" target="_blank" class="" style="padding: 0;"><%%VALUE(backlink)%%></a></td>
 		<td id="submitlog-affiliate-<%%VALUE(submid)%%>" class=""><%%VALUE(affiliate)%%></td>
 		<td id="submitlog-affiliateid-<%%VALUE(submid)%%>" class=""><%%VALUE(affiliateid)%%></td>
+		<script>jQuery(function(){ var e_download = '<%%VALUE(download)%%>'; if(e_download == '' || e_download == '&nbsp;') jQuery('#submitlog-download-<%%VALUE(submid)%%>').html(''); });</script>
 		<script>jQuery(function(){ var e_backlink = '<%%VALUE(backlink)%%>'; if(e_backlink == '' || e_backlink == '&nbsp;') jQuery('#submitlog-backlink-<%%VALUE(submid)%%>').html(''); });</script>

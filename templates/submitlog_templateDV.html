@@ -236,7 +236,14 @@
 				<div class="form-group">
 					<label for="download" class="control-label col-lg-3">Download</label>
 					<div class="col-lg-9">
-						<input maxlength="128" type="text" class="form-control" name="download" id="download" value="<%%VALUE(download)%%>">
+						
+						<div class="row">
+							<div class="col-md-8">
+								<a id="download-link" href="link.php?t=submitlog&f=download&i=<%%VALUE(submid)%%>" target="_blank"><%%VALUE(download)%%></a>
+								<label for="download"><button type="button" id="download-edit-link" class="btn btn-default hspacer-lg vspacer-sm" data-toggle="collapse" data-target="#download" title="<%%TRANSLATION(Edit)%%>"><i class="glyphicon glyphicon-pencil"></i></button></label>
+							</div>
+							<script>jQuery(function(){ var e_download = '<%%VALUE(download)%%>'; if(e_download == '' || e_download == '&nbsp;' || e_download == 'blank.gif') jQuery('#download-link').hide(); });</script><input maxlength="128" type="text" class="form-control collapse" name="download" id="download" value="<%%VALUE(download)%%>">					</div>
+
 					</div>
 				</div>
 
@@ -264,7 +271,7 @@
 				<div class="form-group">
 					<label for="affiliate" class="control-label col-lg-3">Affiliate</label>
 					<div class="col-lg-9">
-						<input maxlength="1" type="text" class="form-control" name="affiliate" id="affiliate" value="<%%VALUE(affiliate)%%>">
+						<input maxlength="40" type="text" class="form-control" name="affiliate" id="affiliate" value="<%%VALUE(affiliate)%%>">
 					</div>
 				</div>
 
@@ -301,6 +308,9 @@
 		$j(function() {
 			var add_new_mode = (!$j('input[name=SelectedID]').val());
 			var embedded_mode = ($j('input[name=Embedded]').val() == 1);
+
+			/* enable DV action buttons to float on scrolling down the form */
+			enable_dvab_floating();
 
 			$j('select, input[type=text], textarea').not(':disabled').eq(0).focus();
 			$j('form').eq(0).change(function(){

@@ -327,7 +327,7 @@ function submitlog_form($selected_id = '', $AllowUpdate = 1, $AllowInsert = 1, $
 	$templateCode = @file_get_contents('./templates/submitlog_templateDV.html');
 
 	// process form title
-	$templateCode = str_replace('<%%DETAIL_VIEW_TITLE%%>', 'Filtered Submissions', $templateCode);
+	$templateCode = str_replace('<%%DETAIL_VIEW_TITLE%%>', 'New Submissions', $templateCode);
 	$templateCode = str_replace('<%%RND1%%>', $rnd1, $templateCode);
 	$templateCode = str_replace('<%%EMBEDDED%%>', ($_REQUEST['Embedded'] ? 'Embedded=1' : ''), $templateCode);
 	// process buttons
@@ -396,6 +396,7 @@ function submitlog_form($selected_id = '', $AllowUpdate = 1, $AllowInsert = 1, $
 		$jsReadOnly .= "\tjQuery('#icon').replaceWith('<div class=\"form-control-static\" id=\"icon\">' + (jQuery('#icon').val() || '') + '</div>');\n";
 		$jsReadOnly .= "\tjQuery('#padfile').replaceWith('<div class=\"form-control-static\" id=\"padfile\">' + (jQuery('#padfile').val() || '') + '</div>');\n";
 		$jsReadOnly .= "\tjQuery('#download').replaceWith('<div class=\"form-control-static\" id=\"download\">' + (jQuery('#download').val() || '') + '</div>');\n";
+		$jsReadOnly .= "\tjQuery('#download, #download-edit-link').hide();\n";
 		$jsReadOnly .= "\tjQuery('#aspnumber').replaceWith('<div class=\"form-control-static\" id=\"aspnumber\">' + (jQuery('#aspnumber').val() || '') + '</div>');\n";
 		$jsReadOnly .= "\tjQuery('#backlink').replaceWith('<div class=\"form-control-static\" id=\"backlink\">' + (jQuery('#backlink').val() || '') + '</div>');\n";
 		$jsReadOnly .= "\tjQuery('#backlink, #backlink-edit-link').hide();\n";
@@ -625,6 +626,8 @@ function submitlog_form($selected_id = '', $AllowUpdate = 1, $AllowInsert = 1, $
 			$templateCode.="\n\tif(document.getElementById('websiteEditLink')){ document.getElementById('websiteEditLink').style.display='none'; }";
 			$templateCode.="\n\tif(document.getElementById('screenshotEdit')){ document.getElementById('screenshotEdit').style.display='inline'; }";
 			$templateCode.="\n\tif(document.getElementById('screenshotEditLink')){ document.getElementById('screenshotEditLink').style.display='none'; }";
+			$templateCode.="\n\tif(document.getElementById('downloadEdit')){ document.getElementById('downloadEdit').style.display='inline'; }";
+			$templateCode.="\n\tif(document.getElementById('downloadEditLink')){ document.getElementById('downloadEditLink').style.display='none'; }";
 			$templateCode.="\n\tif(document.getElementById('backlinkEdit')){ document.getElementById('backlinkEdit').style.display='inline'; }";
 			$templateCode.="\n\tif(document.getElementById('backlinkEditLink')){ document.getElementById('backlinkEditLink').style.display='none'; }";
 		}
