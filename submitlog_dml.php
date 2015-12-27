@@ -287,6 +287,21 @@ function submitlog_form($selected_id = '', $AllowUpdate = 1, $AllowInsert = 1, $
 	$combo_pdate->DefaultDate = parseMySQLDate('', '');
 	$combo_pdate->MonthNames = $Translation['month names'];
 	$combo_pdate->NamePrefix = 'pdate';
+	// combobox: affiliate
+	$combo_affiliate = new Combo;
+	$combo_affiliate->ListType = 0;
+	$combo_affiliate->MultipleSeparator = ', ';
+	$combo_affiliate->ListBoxHeight = 10;
+	$combo_affiliate->RadiosPerLine = 1;
+	if(is_file(dirname(__FILE__).'/hooks/submitlog.affiliate.csv')){
+		$affiliate_data = addslashes(implode('', @file(dirname(__FILE__).'/hooks/submitlog.affiliate.csv')));
+		$combo_affiliate->ListItem = explode('||', entitiesToUTF8(convertLegacyOptions($affiliate_data)));
+		$combo_affiliate->ListData = $combo_affiliate->ListItem;
+	}else{
+		$combo_affiliate->ListItem = explode('||', entitiesToUTF8(convertLegacyOptions("Avangate;;RegNow;;Share-It;;eSellerate;;Plimus")));
+		$combo_affiliate->ListData = $combo_affiliate->ListItem;
+	}
+	$combo_affiliate->SelectName = 'affiliate';
 
 	if($selected_id){
 		// mm: check member permissions
@@ -318,8 +333,11 @@ function submitlog_form($selected_id = '', $AllowUpdate = 1, $AllowInsert = 1, $
 		$hc = new CI_Input();
 		$row = $hc->xss_clean($row); /* sanitize data */
 		$combo_pdate->DefaultDate = $row['pdate'];
+		$combo_affiliate->SelectedData = $row['affiliate'];
 	}else{
+		$combo_affiliate->SelectedText = ( $_REQUEST['FilterField'][1]=='32' && $_REQUEST['FilterOperator'][1]=='<=>' ? (get_magic_quotes_gpc() ? stripslashes($_REQUEST['FilterValue'][1]) : $_REQUEST['FilterValue'][1]) : "");
 	}
+	$combo_affiliate->Render();
 
 	// code for template based detail view forms
 
@@ -400,7 +418,7 @@ function submitlog_form($selected_id = '', $AllowUpdate = 1, $AllowInsert = 1, $
 		$jsReadOnly .= "\tjQuery('#aspnumber').replaceWith('<div class=\"form-control-static\" id=\"aspnumber\">' + (jQuery('#aspnumber').val() || '') + '</div>');\n";
 		$jsReadOnly .= "\tjQuery('#backlink').replaceWith('<div class=\"form-control-static\" id=\"backlink\">' + (jQuery('#backlink').val() || '') + '</div>');\n";
 		$jsReadOnly .= "\tjQuery('#backlink, #backlink-edit-link').hide();\n";
-		$jsReadOnly .= "\tjQuery('#affiliate').replaceWith('<div class=\"form-control-static\" id=\"affiliate\">' + (jQuery('#affiliate').val() || '') + '</div>');\n";
+		$jsReadOnly .= "\tjQuery('#affiliate').replaceWith('<div class=\"form-control-static\" id=\"affiliate\">' + (jQuery('#affiliate').val() || '') + '</div>'); jQuery('#affiliate-multi-selection-help').hide();\n";
 		$jsReadOnly .= "\tjQuery('#affiliateid').replaceWith('<div class=\"form-control-static\" id=\"affiliateid\">' + (jQuery('#affiliateid').val() || '') + '</div>');\n";
 		$jsReadOnly .= "\tjQuery('.select2-container').hide();\n";
 
@@ -413,6 +431,8 @@ function submitlog_form($selected_id = '', $AllowUpdate = 1, $AllowInsert = 1, $
 	// process combos
 	$templateCode=str_replace('<%%COMBO(pdate)%%>', ($selected_id && !$arrPerm[3] ? '<div class="form-control-static">' . $combo_pdate->GetHTML(true) . '</div>' : $combo_pdate->GetHTML()), $templateCode);
 	$templateCode=str_replace('<%%COMBOTEXT(pdate)%%>', $combo_pdate->GetHTML(true), $templateCode);
+	$templateCode=str_replace('<%%COMBO(affiliate)%%>', $combo_affiliate->HTML, $templateCode);
+	$templateCode=str_replace('<%%COMBOTEXT(affiliate)%%>', $combo_affiliate->SelectedData, $templateCode);
 
 	/* lookup fields array: 'lookup field name' => array('parent table name', 'lookup field caption') */
 	$lookup_fields = array();

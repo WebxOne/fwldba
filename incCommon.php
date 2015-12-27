@@ -1219,7 +1219,7 @@ EOT;
 				<div class="col-xs-12 <?php echo $link['grid_column_classes']; ?>">
 					<div class="panel <?php echo $link['panel_classes']; ?>">
 						<div class="panel-body">
-							<a class="btn btn-block btn-lg <?php echo $link['link_classes']; ?>" target="<?php echo $link['target']; ?>" title="<?php echo preg_replace("/&amp;(#[0-9]+|[a-z]+);/i", "&$1;", htmlspecialchars(strip_tags($link['description']))); ?>" href="<?php echo $link['url']; ?>"><?php echo ($link['icon'] ? '<img src="' . $link['icon'] . '">' : ''); ?><strong><?php echo $link['title']; ?></strong></a>
+							<a class="btn btn-block btn-lg <?php echo $link['link_classes']; ?>" target="<?php ($link['target']) ?> "title="<?php echo preg_replace("/&amp;(#[0-9]+|[a-z]+);/i", "&$1;", htmlspecialchars(strip_tags($link['description']))); ?>" href="<?php echo $link['url']; ?>"><?php echo ($link['icon'] ? '<img src="' . $link['icon'] . '">' : ''); ?><strong><?php echo $link['title']; ?></strong></a>
 							<div class="panel-body-description"><?php echo $link['description']; ?></div>
 						</div>
 					</div>

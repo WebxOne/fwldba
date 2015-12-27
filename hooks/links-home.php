@@ -44,7 +44,7 @@
 			'title' => 'Avangate',			
 			'description' => 'Affiliate Login and Panel',
 			'groups' => array('Admins', 'sysop'), 
-			'icon' => 'http://www.sharewarelair.com/webicons/plimus.gif'
+			'icon' => 'http://www.sharewarelair.com/webicons/avangate.png'
 		);
 		$homeLinks[] = array(
 			'url' => 'http://www.freewarelair.com/sysop/', 
